@@ -1,0 +1,40 @@
+# Ignore Airflow logs
+logs/
+MATERIALS/logs/
+
+# Ignore Airflow configuration files
+airflow.cfg
+unittests.cfg
+
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+
+# Ignore environment files
+.env
+
+# Ignore virtual environments
+venv/
+.env/
+.envrc
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore YAML configurations
+*.yaml
+
+# Ignore database files (if using SQLite)
+airflow.db
+*.db
+
+# Ignore JetBrains project files (like PyCharm)
+.idea/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore other common directories
+tmp/
+temp/
