@@ -1,10 +1,11 @@
 from airflow import DAG, Dataset
 from airflow.decorators import task
+# from include.datasets import MY_FILE
 
 from datetime import datetime
 
 my_file = Dataset ("/tmp/my_file.txt")
-my_file_2 = Dataset ("/tmp/my_file_2.txt")
+# my_file_2 = Dataset ("/tmp/my_file_2.txt")
 
 
 with DAG (
@@ -22,12 +23,12 @@ with DAG (
             f.write("producer update")
 
     
-    @task(outlets=[my_file_2])
-    def update_dataset_2():
+    # @task(outlets=[my_file_2])
+    # def update_dataset_2():
 
-        # abrimos fichero
-        with open(my_file_2.uri, "a+") as f:
-            f.write("producer update")
+    #     # abrimos fichero
+    #     with open(my_file_2.uri, "a+") as f:
+    #         f.write("producer update")
     
     
-    update_dataset() >> update_dataset_2()
+    update_dataset() 
